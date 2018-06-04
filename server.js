@@ -23,7 +23,7 @@ app.use((req, res, next) => {
     console.log(log)
     fs.appendFileSync('log.txt', log + '\n', err => {
         if (err) {
-            console.log('Unable to append to server')
+            console.log('Unable to append log to server')
         }
     })
     next();
