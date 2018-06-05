@@ -17,17 +17,17 @@ app.use(express.static(__dirname + '/public'))
 //     res.render('maintinance.hbs')
 // })
 
-app.use((req, res, next) => {
-    var now = new Date().toString();
-    var log = `${now} : Method: ${req.method}, Path: ${req.path}, ip: ${req.ip}`
-    console.log(log)
-    fs.appendFileSync('log.txt', log + '\n', err => {
-        if (err) {
-            console.log('Unable to append log to server')
-        }
-    })
-    next();
-})
+// app.use((req, res, next) => {
+//     var now = new Date().toString();
+//     var log = `${now} : Method: ${req.method}, Path: ${req.path}, ip: ${req.ip}`
+//     console.log(log)
+//     fs.appendFileSync('log.txt', log + '\n', err => {
+//         if (err) {
+//             console.log('Unable to append log to server')
+//         }
+//     })
+//     next();
+// })
 
 
 
